@@ -1,6 +1,6 @@
 // Displays each emoji 
 
-function Page({ emoji }){
+function EmojiPage({ emoji }){
     const { strName,
             strCategory , 
             strGroup ,

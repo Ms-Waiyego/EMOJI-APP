@@ -2,7 +2,7 @@ import EmojiPage from "./EmojiPage";
 
 // Receives props of the emoji
 
-function EmojiData( { emoji }){
+function EmojiData( { emoji ,loading }){
 
     return(
         <div>
