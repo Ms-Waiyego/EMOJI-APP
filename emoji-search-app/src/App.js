@@ -1,15 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import About from './Components/About';
-import EmojiData from './Components/EmojiData'
-import EmojiPage from './Components/EmojiPage';
+import Home from './Components/Home';
 
 function App(){
   return(
     <div>
-  <About/>
-  <EmojiData/>
-  <EmojiPage/>
+   <Home/>
   </div>
 )}
 
