@@ -2,6 +2,7 @@ import { Route , Switch , Link } from "react-router-dom";
 import { useState, useEffect, } from "react"
 import About from "./About";
 import EmojiPage from "./EmojiPage";
+import EmojiData from "./EmojiData";
 
 //Fetching the url to be used
 const url = `https://emojihub.herokuapp.com/api/all/group_animal_bird`
@@ -19,6 +20,7 @@ function Nav(){
 //Emoji home page
 function Home(){
     const [emoji, setEmoji] = useState([]);
+    const [ loading, setLoading ] = useState(true);
 
   const fetchEmoji = () => {
     return fetch("https://emojihub.herokuapp.com/api/all/group_animal_bird")
@@ -30,26 +32,14 @@ function Home(){
     fetchEmoji();
   },[])
 
-
-//Search input
-function Search(){
-    return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="enter emoji name"/>
-            <button onClick={handleSubmit} >Search Emoji</button>
-        </form>
-    )
-}
 return (
     <div>
-      <Navigation/>
+      <Nav/>
       <Switch>
         <Route path="/about">
             <About />
         </Route>
-
         <Route path="/">
-            <Search/>
             <EmojiPage emoji={emoji} loading={loading} />
         </Route>
       </Switch>
@@ -57,5 +47,4 @@ return (
 )
 
 }
-
 export default Home
