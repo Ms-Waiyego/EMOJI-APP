@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './Components/Home';
+import Header from "./Components/Header"
+import Emoji from "./Components/Emoji"
 
 function App(){
   return(
-    <div>
-   <Home/>
+    <div className="container">
+   <Header/>
+   <Emoji/>
   </div>
-)}
-
-export default App
+  )}
+export default App;
