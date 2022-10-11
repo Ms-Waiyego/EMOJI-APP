@@ -1,9 +1,7 @@
 import { useState } from "react";
-
 const Form  =({ setValueEmoji }) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
-
   const handleSearch = e => {
       e.preventDefault();
       if(value === ''){
@@ -17,13 +15,12 @@ const Form  =({ setValueEmoji }) => {
   const allEmojis = () => {
       setValueEmoji('');
   }
-
   return (
     <div className="searchbar">
           <form onSubmit={handleSearch}>
-              <input 
-                  type="text" 
-                  placeholder="emoji word..." 
+              <input
+                  type="text"
+                  placeholder="emoji word..."
                   onChange={e => setValue(e.target.value)} />
          </form>
          <button
@@ -34,5 +31,4 @@ const Form  =({ setValueEmoji }) => {
                 </button>
          </div>
   )}
-
 export default Form
