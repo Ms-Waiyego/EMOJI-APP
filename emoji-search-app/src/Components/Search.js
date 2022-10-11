@@ -19,7 +19,7 @@ const Form  =({ setValueEmoji }) => {
   }
 
   return (
-    <div>
+    <div className="searchbar">
           <form onSubmit={handleSearch}>
               <input 
                   type="text" 
