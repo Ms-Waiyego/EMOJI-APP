@@ -18,12 +18,12 @@ const Form  =({ setValueEmoji }) => {
   return (
     <div className="searchbar">
           <form onSubmit={handleSearch}>
-              <input
+              <input className="searchbarinput"
                   type="text"
                   placeholder="emoji word..."
                   onChange={e => setValue(e.target.value)} />
          </form>
-         <button
+         <button className="btn"
                     type="button"
                     onClick={allEmojis}
                 >
