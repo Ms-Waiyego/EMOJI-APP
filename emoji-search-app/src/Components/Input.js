@@ -3,7 +3,7 @@ import React from 'react'
 const Input = () => {
   return (
     <form>
-        <input type={text} placeholder='Search'>Search</input>
+        <input type = "text" placeholder='Search'></input>
     </form>
   )
 }
