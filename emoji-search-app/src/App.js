@@ -1,11 +1,12 @@
 import Header from "./Components/Header"
 import Emoji from "./Components/Emoji"
 import { useState, useEffect} from 'react'
-import Input from './Components/Input'
+import Search from './Components/Search'
+import Footer from "./Components/Footer"
+
 
 function App(){
   const [emoji, setEmoji] = useState ([])
-
  useEffect(()=>{
   const getEmoji = async () => {
     const emojisServer = await fetchEmoji()
@@ -15,16 +16,16 @@ function App(){
 
  //Fetching data
  const fetchEmoji = async ()=>{
-  const res = await fetch ('http://localhost:5000/emojis')
+  const res = await fetch ('http://localhost:5000/emojis',{method : "GET"})
   const data = await res.json()
   return data
  }
   return(
     <div className="container">
    <Header/>
-   <Input/>
+   <Search/>
    <Emoji emojis={emoji}/>
-
+   <Footer/>
   </div>
   )}
 export default App;
